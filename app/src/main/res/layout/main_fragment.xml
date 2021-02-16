@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="arun.pkg.passportdemo.main.MainViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.main.MainFragment">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner_template"
+                onItemSelected="@{viewModel.itemSelectedListener}"
+                spinner_data="@{viewModel.templatesList}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/gradient_spinner"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/btn_select_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:onClick="@{() -> viewModel.onGalleryButtonClicked()}"
+                android:text="Select image"
+                app:layout_constraintLeft_toLeftOf="@id/spinner_template"
+                app:layout_constraintTop_toBottomOf="@id/spinner_template" />
+
+
+            <ImageView
+                android:id="@+id/img_image"
+                picture="@{viewModel.imagePath}"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="@id/btn_select_image"
+                app:layout_constraintTop_toBottomOf="@id/btn_select_image"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txt_firebase_results"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="@{viewModel.firebaseResult}"
+                android:textSize="15sp"
+                app:layout_constraintLeft_toLeftOf="@id/img_image"
+                app:layout_constraintTop_toBottomOf="@id/img_image"
+                tools:text="Firebase results: abcd" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

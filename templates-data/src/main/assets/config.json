@@ -1,0 +1,44 @@
+{
+  "Passport": {
+    "keys": {
+      "eid": ["EID"],
+      "imei_meid": ["IMEI/MEID"],
+      "serial_no": ["Serial No."],
+      "imei_2": ["IMEI2"]
+    },
+    "pattern": {
+      "eid": "\\d{32}",
+      "imei_meid": "\\d{15}",
+      "serial_no": "\\w{12}",
+      "imei_2": "\\d{15}"
+    }
+  },
+  "Aadhar Card": {
+    "keys": {
+      "name": [""],
+      "date_of_birth": ["DOB:"],
+      "gender": [""],
+      "aadhar_number": [""]
+    },
+    "pattern": {
+      "name": "\\w{12}",
+      "date_of_birth": "\\w{19}",
+      "gender": "\\w{11}",
+      "aadhar_number": "\\d{6}"
+    }
+  },
+  "Bank Statement": {
+    "keys": {
+      "content": ["Content"],
+      "best_before": ["Best Before"],
+      "count": ["Count"],
+      "batch": ["Batch"]
+    },
+    "pattern": {
+      "content": "\\d{14}",
+      "best_before": "\\d{1,2}/\\d{2}/\\d{4}",
+      "count": "\\d{2}",
+      "batch": "\\d{10}"
+    }
+  }
+}

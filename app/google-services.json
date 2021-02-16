@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "850330110748",
+    "firebase_url": "https://passport-demo-b20be.firebaseio.com",
+    "project_id": "passport-demo-b20be",
+    "storage_bucket": "passport-demo-b20be.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850330110748:android:f63c4f66a4f5747f8d08d9",
+        "android_client_info": {
+          "package_name": "arun.pkg.passportdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850330110748-9sbb1uou9hgg6odi6vqmrfaii6rilabu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRdlOAW9thoomL9LXnhI9eP7ihQF7e1Kk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850330110748-9sbb1uou9hgg6odi6vqmrfaii6rilabu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

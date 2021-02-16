@@ -1,0 +1,21 @@
+include ':custom-camera-ui'
+rootProject.name='Passport Demo'
+include ':app'
+
+include ':firebase-ml-domain'
+include ':firebase-ml-data'
+
+include ':libraries:opencv'
+include ':opencv-data'
+include ':opencv-domain'
+
+include ':templates-domain'
+include ':templates-data'
+
+include ':tesseract-domain'
+include ':tesseract-data'
+
+include ':core-lib'
+include ':non-core-lib'
+
+include ':custom-camera-ui'
